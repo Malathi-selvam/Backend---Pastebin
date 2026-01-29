@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/paste")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://frontend-pastebin-one.vercel.app")
 public class PasteController {
 
     @Autowired
@@ -29,7 +29,7 @@ public class PasteController {
         Paste paste = service.createPaste(content, maxViews);
 
         return Map.of(
-            "url", "http://localhost:5173/paste/" + paste.getId()
+            "url", "https://frontend-pastebin-one.vercel.app/paste/" + paste.getId()
         );
     }
 
